@@ -1,0 +1,34 @@
+  ALGORITHM algorithm_name
+VAR
+    tab1 : ARRAY_OF INTEGER[10]; 
+    tab2 : ARRAY_OF INTEGER[10];
+    tab3 : ARRAY_OF INTEGER[10];
+    k,i,j:INTEGER;
+    sum:INTEGER:=0;
+    pos:INTEGER:=0;
+
+BEGIN
+
+     FOR i FROM 0 TO tab1.length STEP 1 DO 
+      FOR j FROM 0 TO tab2.length STEP 1 DO
+        IF(tab1[i]==tab2[j])
+        tab3[pos]=tab1[i];
+        pos=pos+1
+        END_IF
+      END_FOR
+     END_FOR
+
+    FOR i FROM 0 TO tab3.length STEP 1 DO 
+     k=tab3[i]*2;
+     sum=sum+k;
+    END_FOR
+   write("sum of overlapping elements is ")
+   write(sum)
+   write("overlapping elements")
+   FOR i FROM 0 TO tab3.length STEP 1 DO 
+     write(tab3[i])
+    END_FOR
+
+    
+END
+  
